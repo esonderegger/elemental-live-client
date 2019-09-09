@@ -200,4 +200,10 @@ describe('ElementalClient', () => {
     assert.equal('', ElementalClient.extractIdFromHref(obj));
     assert.equal('', ElementalClient.extractIdFromHref(''));
   });
+
+  it('elementalAuthKey should work with example from docs', () => {
+    assert.equal('17222238c238b7ac9f76ea8d0fe1e330', ElementalClient.elementalAuthKey(
+      '/live_events/1', 'admin', '1acpJN7oEDn3BDDYhQ', 1306886400
+    ));
+  });
 });
